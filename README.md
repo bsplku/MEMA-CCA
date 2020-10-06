@@ -11,7 +11,7 @@
 * Brain_response : The z-scored coefficient (beta) of each condition (ECIG & SCIG) from 1st-level analysis (GLM) 
   * The dataset consists of 10 subjects x 7 voxels (beta values of the center voxel and its six neighboring voxels within right insula identified from MEMA)
 * Behavioral_data : Three behavior data (i.e., Similarity, Urge-to-smoke, and Smoking duration) normalized in zero to one. 
-  * All of subjects scored two behavioral measurements (Similarity to their own e-cigarette in terms of nicotine absorption and the level of Urge-to-smoke) after smoking each type of MR-competible e-cigarette apparatus and the Smoking duration was recorded
+  * All of subjects scored two behavioral measurements (*Similarity to their own e-cigarette in terms of nicotine absorption and the level of Urge-to-smoke*) after smoking each type of MR-competible e-cigarette apparatus and the *Smoking duration* was recorded
   * The dataset consists of 10 subjects x 3 behavior data
 
 ## MEMA:
@@ -27,6 +27,8 @@
 * 
 
 ## CCA in leave-one-subject-out cross validation:
+* To test the statistical significance of the relationship between fMRI and behavior data
+  * In the test set (n=1), canonical variates and their respective canonical correlations were created using coefficients from the CCA performed in the training set (n=10-1)
 #### Requirement:
 * Install MATLAB (>2014a) on your own PC
 #### Download sample data:
