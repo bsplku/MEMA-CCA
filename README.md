@@ -24,7 +24,16 @@
 #### Data structure:
 * 
 #### Shell script:
-* 
+* Open a terminal, navigate to the *MEMA_dir* directory, 
+```bash
+tcsh 
+``` 
+* Edit the directory and prefix you want in **MEMA_script.tcsh** ,
+* Run the shell script
+```bash
+tcsh MEMA_script.tcsh 
+``` 
+* The result saved in *results* folder as the prefix you named
 
 ## CCA in leave-one-subject-out cross validation:
 * To test the statistical significance of the relationship between fMRI and behavior data
