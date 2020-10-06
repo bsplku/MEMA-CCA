@@ -1,4 +1,4 @@
-%% 2018 Jan 09. made by Sungman Jo
+%% 2020 June 09. made by Sungman Jo
 % brain_data = subjects x voxels (18 x 7)
 % behavior_data = subjects x behavioral data [similarity, urge-to-smoke, smoking duration] (18 x 3)
 % A = canonical weight of brain data
