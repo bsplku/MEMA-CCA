@@ -23,12 +23,15 @@
 * Please download the sample data below link:
 #### Data structure:
 * 
-
-
+#### Running code:
+* 
 
 ## CCA in leave-one-subject-out cross validation:
 #### Requirement:
 * Install MATLAB (>2014a) on your own PC
 #### Download sample data:
 * Please download the sample data below link:
-
+#### Data structure:
+* 
+#### Running code:
+* 
