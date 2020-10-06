@@ -3,11 +3,11 @@
 * To find the evidence of association between behavior and brain identified from high heterogeniety
 
 ## Sample data:
-#### for MEMA:
+### for MEMA:
 * The Blood-oxygenation-level-dependent(BOLD) fMRI volumes were acquired while the subjects were smoking with the MR-competible e-cigarette apparatus (ECIG; with nicotine) in MRI scanner  
 * The preprocessed BOLD fMRI were analyzed with General Linear Model (GLM) for an individual level analysis (using “3dREMLfit” for least squares restricted maximum likelihood estimation in AFNI)
 
-#### for CCA:
+### for CCA:
 * brain_response : The z-scored coefficient (beta) of the condition (ECIG) from 1st-level analysis (GLM) 
   * The dataset consists of 18 subjects x 7 voxels (beta values of the center voxel and its six neighboring voxels within right insula identified from MEMA)
 * behavior_data : Three behavior data (i.e., **Similarity, Urge-to-smoke, and Smoking duration**) normalized in zero to one. 
@@ -17,16 +17,16 @@
 ## MEMA:
 * fMRI group analysis that incorporates both the variability across subjects and the precision estimate of each effect of interest from individual subject anlyses
   * Chen, Gang, et al. "FMRI group analysis combining effect estimates and their variances." Neuroimage 60.1 (2012): 747-765.
-#### Requirement:
+### Requirement:
 * Install AFNI and R software on your own desktop/laptop: https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html
-#### Download sample data:
+### Download sample data:
 * Please download the sample data this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/MEMA_dir.zip
-#### Data structure:
+### Data structure:
 The sample dataset consists of two folders:
 * beta: NIfTI files (_beta.nii) of 18 subjects' individual beta value in whole brain 
 * tscore: NIfTI files (_tscore.nii) of 18 subjects' individual Student's *t*-test in whole brain 
 The preprocessed BOLD fMRI were analyzed with General Linear Model (GLM) for an individual level analysis 
-#### Shell script:
+### Shell script:
 * Open a terminal, navigate to the *MEMA_dir* directory, 
 ```bash
 cd [MEMA_dir] 
@@ -48,15 +48,15 @@ afni MEMA_ecig+tlrc.HEAD
 * To test the statistical significance of the relationship between fMRI and behavior data
 * In the validataion set (n=1), canonical variates and their respective canonical correlations were created using coefficients from the CCA performed in the training set (n=17)
   * Dinga, Richard, et al. "Evaluating the evidence for biotypes of depression: Methodological replication and extension of." NeuroImage: Clinical 22 (2019): 101796.
-#### Requirement:
+### Requirement:
 * Install MATLAB (>2014a) on your own PC
-#### Download sample data:
+### Download sample data:
 * Please download the sample data this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/cca_loocv_dataset.mat
-#### Data structure:
+### Data structure:
 The input '.mat' file includes:
 * 'brain_response' is the z-scored coefficients of seven voxels from individual subjects analysis within ROI (right insula) identified from high heterogeniety (chi-square < 10^-8) 
 * 'behavior_data' is the 0 to 1 normalized scores of three behavior data 
-#### MATLAB code:
+### MATLAB code:
 * 'cca_loocv_bspl.m' is for CCA in LOOCV
 * 'linear_reg_bspl.m' is for the examination of the linear regression for the relationship between dependent and independent variables 
 * Run the 'test_cca_loocv.m' 
