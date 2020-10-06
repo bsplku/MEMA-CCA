@@ -1,5 +1,5 @@
 # Mixed-effects multilevel analysis (MEMA) & Canonical correlation analysis (CCA) in fMRI study
-* Guide for MEMA followed by CCA in leave-one-subject-out cross validation
+* Guide for MEMA followed by CCA in leave-one-subject-out cross validation (LOOCV)
 * To find the evidence of association between behavior and brain identified from high heterogeniety
 
 ## Sample data:
@@ -23,7 +23,7 @@
 * Please download the sample data below link:
 #### Data structure:
 * 
-#### Running code:
+#### Shell script:
 * 
 
 ## CCA in leave-one-subject-out cross validation:
@@ -32,6 +32,10 @@
 #### Download sample data:
 * Please download the sample data below link:
 #### Data structure:
-* 
-#### Running code:
-* 
+The input '.mat' file includes:
+* 'Brain_response' is the z-scored coefficient from individual subjects analysis within ROI identified from high heterogeniety (chi-square < 10^-8)
+* 'Behavioral_data' is the 0 to 1 normalized scores of three 
+#### MATLAB code:
+* 'cca_loocv_bspl.m' is for CCA in LOOCV
+* 'linear_reg_bspl.m' is to examine the linear regression with 
+* Run the 'test_cca_loocv.m' 
