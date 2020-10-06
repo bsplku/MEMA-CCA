@@ -31,7 +31,7 @@ The preprocessed BOLD fMRI were analyzed with General Linear Model (GLM) for an 
 ```bash
 cd [MEMA_dir] 
 ``` 
-* Edit the directory and prefix you want in **MEMA_script.tcsh** ,
+* Edit the directory and prefix you want in **MEMA_script.tcsh**
 * Run the shell script
 ```bash
 tcsh MEMA_script_bspl.tcsh 
