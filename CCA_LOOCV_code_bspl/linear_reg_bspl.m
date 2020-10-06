@@ -1,4 +1,4 @@
-%% 2018 Jan 09. made by Sungman Jo
+%% 2020 June 09. made by Sungman Jo
 
 function [b1,b0] = linear_reg_bspl(x,y)
 
