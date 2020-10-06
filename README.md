@@ -60,3 +60,7 @@ The input '.mat' file includes:
 * 'cca_loocv_bspl.m' is for CCA in LOOCV
 * 'linear_reg_bspl.m' is for the examination of the linear regression for the relationship between dependent and independent variables 
 * Run the 'test_cca_loocv.m' 
+* Three figures will be shown:
+  1. Correlation of pair of canonical variates
+  2. Correlations of behavior data canonical variate and each behavioral datum [Similiarity, Urge-to-smoke, Smoking duration]
+  3. Correlations of brain response canonical variate and each behavioral datum [Similiarity, Urge-to-smoke, Smoking duration]
