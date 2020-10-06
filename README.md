@@ -28,7 +28,7 @@
 
 ## CCA in leave-one-subject-out cross validation:
 * To test the statistical significance of the relationship between fMRI and behavior data
-  * In the validataion set (n=1), canonical variates and their respective canonical correlations were created using coefficients from the CCA performed in the training set (n=10-1)
+* In the validataion set (n=1), canonical variates and their respective canonical correlations were created using coefficients from the CCA performed in the training set (n=10-1)
   * Dinga, Richard, et al. "Evaluating the evidence for biotypes of depression: Methodological replication and extension of." NeuroImage: Clinical 22 (2019): 101796.
 #### Requirement:
 * Install MATLAB (>2014a) on your own PC
