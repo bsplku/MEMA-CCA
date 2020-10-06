@@ -20,7 +20,7 @@
 #### Requirement:
 * Install AFNI and R software on your own desktop/laptop https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html
 #### Download sample data:
-* Please download the sample data below link http://bspl.korea.ac.kr/Research_data/MEMA-CCA/MEMA_dir.zip
+* Please download the sample data this link http://bspl.korea.ac.kr/Research_data/MEMA-CCA/MEMA_dir.zip
 #### Data structure:
 * 
 #### Shell script:
