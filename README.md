@@ -6,7 +6,6 @@
 #### for MEMA:
 * Our datasets were acquired while the subjects were smoking with two types of the MR-competible e-cigarette apparatus (i.e., ECIG; with nicotine, SCIG; without nicotine) in MRI scanner  
 * The samples of pre-preocessed fMRI timeseries consists of 10 subjects
-
 #### for CCA:
 * Brain_response : The z-scored coefficient (beta) from 1st-level analysis (GLM; General Linear Model). The dataset consists of 10 subjects
 * Behavioral_data : Three measurements (i.e., Similarity, Urge-to-smoke, and Smoking duration) normalized in zero to one. The dataset consists of 10 subjects
@@ -15,10 +14,10 @@
 ## MEMA:
 * fMRI group analysis that incorporates both the variability across subjects and the precision estimate of each effect of interest from individual subject anlyses
   * Chen, Gang, et al. "FMRI group analysis combining effect estimates and their variances." Neuroimage 60.1 (2012): 747-765.
-### Requirement:
+#### Requirement:
 * Install AFNI and R software on your own desktop/laptop https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html
 
 ## CCA in leave-one-subject-out cross validation:
-### Requirement:
+#### Requirement:
 * Install MATLAB (>2014a) on your own PC
 
