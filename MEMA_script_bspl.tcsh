@@ -11,7 +11,7 @@ if ( ! -d $results_dir ) mkdir $results_dir
 # ------------------------- process the data -------------------------
 # specify the prefix you want. default = MEMA_ecig 
 # Input data should consist of coefficient and t-score from individual subjects analysis
-# If you need more information, please find this reference:
+# If you need more information, please find this link : https://afni.nimh.nih.gov/pub/dist/doc/program_help/3dMEMA.html
 3dMEMA -prefix $results_dir/MEMA_ecig                                   \
        -groups ECIG                                                     \
        -HKtest -model_outliers -unequal_variance -residual_Z            \
