@@ -2,7 +2,7 @@
 
 # ---------------------- set process variables ----------------------
 
-set dirA = /home/jsm/Documents/MEMA_dir/ # Fill in your own dataset directory
+set dirA = /home/[user]/MEMA_dir/ # Fill in your own dataset directory
 
 # specify and possibly create results directory
 set results_dir = results # Fill in the your own results directory
