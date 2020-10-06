@@ -23,8 +23,8 @@
 * Please download the sample data this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/MEMA_dir.zip
 ### Data structure:
 The sample dataset consists of two folders:
-* beta: NIfTI files (_beta.nii) of 18 subjects' individual beta value in whole brain 
-* tscore: NIfTI files (_tscore.nii) of 18 subjects' individual Student's *t*-test in whole brain 
+* beta: NIfTI files (S_E_beta.nii) of 18 subjects' individual beta value in whole brain 
+* tscore: NIfTI files (S_E_tscore.nii) of 18 subjects' individual Student's *t*-test in whole brain 
 The preprocessed BOLD fMRI were analyzed with General Linear Model (GLM) for an individual level analysis 
 ### Shell script:
 * Open a terminal, navigate to the *MEMA_dir* directory, 
