@@ -33,9 +33,9 @@
 * Please download the sample data below link:
 #### Data structure:
 The input '.mat' file includes:
-* 'Brain_response' is the z-scored coefficient from individual subjects analysis within ROI identified from high heterogeniety (chi-square < 10^-8)
-* 'Behavioral_data' is the 0 to 1 normalized scores of three 
+* 'Brain_response' is the z-scored coefficients of seven voxels from individual subjects analysis within ROI identified from high heterogeniety 
+* 'Behavioral_data' is the 0 to 1 normalized scores of three behavior data
 #### MATLAB code:
 * 'cca_loocv_bspl.m' is for CCA in LOOCV
-* 'linear_reg_bspl.m' is to examine the linear regression with 
+* 'linear_reg_bspl.m' is for the examination of the linear regression for the relationship between dependent and independent variables 
 * Run the 'test_cca_loocv.m' 
