@@ -20,7 +20,7 @@
 ### Requirement:
 * Install AFNI and R software on your own desktop/laptop: https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html
 ### Download sample data:
-* Please download the sample data this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/MEMA_dir.zip
+* Please download the sample data from this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/MEMA_dir.zip
 ### Data structure:
 The sample dataset consists of two folders:
 * beta: NIfTI files (S_E_beta.nii) of 18 subjects' individual beta value in whole brain 
@@ -51,7 +51,7 @@ afni MEMA_ecig+tlrc.HEAD
 ### Requirement:
 * Install MATLAB (>2014a) on your own PC
 ### Download sample data:
-* Please download the sample data this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/cca_loocv_dataset.mat
+* Please download the sample data from this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/cca_loocv_dataset.mat
 ### Data structure:
 The input '.mat' file includes:
 * 'brain_response' is the z-scored coefficients of seven voxels from individual subjects analysis within ROI (right insula) identified from high heterogeniety (chi-square < 10^-8) 
@@ -62,5 +62,7 @@ The input '.mat' file includes:
 * Run the 'test_cca_loocv.m' 
 * Three figures will be shown:
   1. Correlation of pair of canonical variates
-  2. Correlations of behavior data canonical variate and each behavioral datum [Similiarity, Urge-to-smoke, Smoking duration]
-  3. Correlations of brain response canonical variate and each behavioral datum [Similiarity, Urge-to-smoke, Smoking duration]
+  2. Correlations of behavior data canonical variate and each behavioral datum   
+  [Similiarity, Urge-to-smoke, Smoking duration]
+  3. Correlations of brain response canonical variate and each behavioral datum   
+  [Similiarity, Urge-to-smoke, Smoking duration]
