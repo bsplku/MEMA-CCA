@@ -16,7 +16,7 @@
 
 ## MEMA:
 * fMRI group analysis that incorporates both the variability across subjects and the precision estimate of each effect of interest from individual subject anlyses
-  * Chen, Gang, et al. "FMRI group analysis combining effect estimates and their variances." Neuroimage 60.1 (2012): 747-765.
+  * Chen, Gang, et al. "FMRI group analysis combining effect estimates and their variances." Neuroimage 60.1 (2012): 747-765. <https://doi.org/10.1016/j.neuroimage.2011.12.060>
 ### Requirement:
 * Install AFNI and R software on your own desktop/laptop: https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html
 ### Download sample data:
@@ -47,7 +47,8 @@ afni MEMA_ecig+tlrc.HEAD
 ## CCA in leave-one-subject-out cross validation:
 * To test the statistical significance of the relationship between fMRI and behavior data
 * In the validataion set (n=1), canonical variates and their respective canonical correlations were created using coefficients from the CCA performed in the training set (n=17)
-  * Dinga, Richard, et al. "Evaluating the evidence for biotypes of depression: Methodological replication and extension of." NeuroImage: Clinical 22 (2019): 101796.
+  * Dinga, Richard, et al. "Evaluating the evidence for biotypes of depression: Methodological replication and extension of." NeuroImage: Clinical 22 (2019): 101796. <https://doi.org/10.1016/j.nicl.2019.101796>
+  
 ### Requirement:
 * Install MATLAB (>2014a) on your own PC
 ### Download sample data:
