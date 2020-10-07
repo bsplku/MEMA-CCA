@@ -54,8 +54,9 @@ afni MEMA_ecig+tlrc.HEAD
 * Please download the sample data from this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/cca_loocv_dataset.mat
 ### Data structure:
 The input '.mat' file includes:
-* 'brain_response' is the z-scored coefficients of seven voxels from individual subjects analysis within ROI (right insula) identified from high heterogeniety (chi-square < 10^-8) 
-* 'behavior_data' is the 0 to 1 normalized scores of three behavior data 
+* 'brain_response' is the z-scored coefficients of seven voxels from individual subjects analysis within ROI (right insula) identified from high heterogeniety (chi-square < 10^-8) (18x7)
+* 'behavior_data' is the 0 to 1 normalized scores of three behavior data (18x3)   
+[Similarity, Urge-to-smoke, Smoking duration]
 ### MATLAB code:
 * 'cca_loocv_bspl.m' is for CCA in LOOCV
 * 'linear_reg_bspl.m' is for the examination of the linear regression for the relationship between dependent and independent variables 
@@ -63,6 +64,6 @@ The input '.mat' file includes:
 * Three figures will be shown:
   1. Correlation of pair of canonical variates
   2. Correlations of behavior data canonical variate and each behavioral datum   
-  [Similiarity, Urge-to-smoke, Smoking duration]
+  [Similarity, Urge-to-smoke, Smoking duration]
   3. Correlations of brain response canonical variate and each behavioral datum   
-  [Similiarity, Urge-to-smoke, Smoking duration]
+  [Similarity, Urge-to-smoke, Smoking duration]
