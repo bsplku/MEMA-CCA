@@ -55,7 +55,7 @@ afni MEMA_ecig+tlrc.HEAD
 * Please download the sample dataset from this link: http://bspl.korea.ac.kr/Research_data/MEMA-CCA/cca_loocv_dataset.mat
 ### Data structure:
 The input '.mat' file includes:
-* 'brain_response' is the z-scored coefficients of seven voxels from subjects' beta values from the GLM within the ROI (right insula) identified from high heterogeniety (chi-square < 10^-8) (18x7)
+* 'brain_response' is the z-scored coefficients of seven voxels from subjects' beta values from the GLM within the ROI (right insula) identified from high heterogeniety (chi-square < 10$^{-8}$) (18x7)
 * 'behavior_data' is the 0 to 1 normalized scores of three behavior data (18x3)   
 [Similarity, Urge-to-smoke, Smoking duration]
 ### MATLAB code:
