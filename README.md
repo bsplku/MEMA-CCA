@@ -36,7 +36,7 @@ cd [MEMA_dir]
 ```bash
 tcsh MEMA_script_bspl.tcsh 
 ``` 
-* The results saved in *results* folder as *MEMA_ecig*: **MEMA_ecig+tlrc, MEMA_ecig_ICC, MEMA_ecig_resZ**
+* The results saved in *results* folder as *MEMA_ecig*: **MEMA_ecig+tlrc, MEMA_ecig_ICC+tlrc, MEMA_ecig_resZ+tlrc**
 > Note : You can freely change the prefix you want. If you need more information of the other results, please find the reference above
 * Open AFNI software in order to check the results
 ```bash
