@@ -1,4 +1,4 @@
-%% 2020 June 09. made by Sungman Jo
+%% 2018 Jan 09. made by Sungman Jo
 % brain_data = subjects x voxels (18 x 7)
 % behavior_data = subjects x behavioral data [similarity, urge-to-smoke, smoking duration] (18 x 3)
 % A = canonical weight of brain data
@@ -28,7 +28,7 @@ for CV_num = 1:size(brain_data,1)
     V_ts_all = [V_ts_all; V_ts];
     CQ = [CQ ; behavior_data(test,:)]; % stack with test set of behavioral data
     
-    figure(10);set(gcf,'NumberTitle','off','Name','Correlation of pair of canonical variates'); 
+    figure(10);set(gcf,'NumberTitle','off','Name','Canonical correlation in test set'); 
     plot(U_ts(1),V_ts(1),'o','LineWidth',2,'MarkerSize',10);axis square;xlabel('U');ylabel('V');set(gca,'linewidth',3,'FontSize', 16);hold on;
     
     figure(11);set(gcf,'NumberTitle','off', 'Name','Correlation of behaviroal data canonical variate and each behavioral datum')
@@ -41,21 +41,52 @@ for CV_num = 1:size(brain_data,1)
     end
 end
 
-figure(10);
-[r1 p1 ] = corr(U_ts_all(:,1),V_ts_all(:,1));title(sprintf('r = %.2f, p = %.3f',r1,p1));
-linear_reg_bspl(U_ts_all(:,1),V_ts_all(:,1));
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% Detection of outlier (Median Absolute Deviation)    %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To consider the potential ouliers in the canonical variates, a median absolute deviation (MAD) was
+% applied with pair of canonical variates in total of test set. The outliers are colored in gray 
+% reference : Kim, Hyun-Chul, et al. "Mediation analysis of triple networks revealed functional feature of mindfulness from real-time fMRI neurofeedback." Neuroimage 195 (2019): 409-432.
 
-figure(11);
+MAD_all_U = abs(U_ts_all(:,1)- median(U_ts_all(:,1)))./(1.4826*mad(U_ts_all(:,1)));
+MAD_all_V = abs(V_ts_all(:,1)- median(V_ts_all(:,1)))./(1.4826*mad(V_ts_all(:,1)));
+
+no_MAD_idx_U = find(MAD_all_U < 3);
+no_MAD_idx_V = find(MAD_all_V < 3);
+no_MAD_idx = intersect(no_MAD_idx_U,no_MAD_idx_V);
+
+MAD_idx_U = find(MAD_all_U > 3);
+MAD_idx_V = find(MAD_all_V > 3);
+MAD_idx = union(MAD_idx_U,MAD_idx_V);
+
+CQ_tmp = CQ(no_MAD_idx,:);
+
+U_ts_all_tmp = U_ts_all(no_MAD_idx,:);
+V_ts_all_tmp = V_ts_all(no_MAD_idx,:);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%       Plot the figures          %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+figure(10);  % canonical correlation
+[r1 p1 ] = corr(U_ts_all_tmp(:,1),V_ts_all_tmp(:,1));title(sprintf('r = %.2f, p = %.3f',r1,p1));
+linear_reg_bspl(U_ts_all_tmp(:,1),V_ts_all_tmp(:,1));hold on;
+plot(U_ts_all(MAD_idx,1),V_ts_all(MAD_idx,1),'o','Color',[.75,.75,.75],'LineWidth',2,'MarkerSize',10);
+
+figure(11); % loading correlation
 for idx = 1:size(behavior_data,2)
-    [r p ] = corr(V_ts_all(:,1),CQ(:,idx));
+    [r p ] = corr(V_ts_all_tmp(:,1),CQ_tmp(:,idx));
     subplot(1,size(behavior_data,2),idx);hold on;title(sprintf('r = %.2f, p = %.3f',r,p));
-    linear_reg_bspl(V_ts_all(:,1),CQ(:,idx));
+    linear_reg_bspl(V_ts_all_tmp(:,1),CQ_tmp(:,idx));
+    plot(V_ts_all(MAD_idx,1),CQ(MAD_idx,idx),'o','Color',[.75,.75,.75],'LineWidth',3,'MarkerSize',12);
 end
-figure(12);
+
+figure(12); % cross-loading correlation
 for idx = 1:size(behavior_data,2)
-    [r p ] = corr(V_ts_all(:,1),CQ(:,idx));
+    [r p ] = corr(U_ts_all_tmp(:,1),CQ_tmp(:,idx));
     subplot(1,size(behavior_data,2),idx);hold on;title(sprintf('r = %.2f, p = %.3f',r,p));
-    linear_reg_bspl(U_ts_all(:,1),CQ(:,idx));
+    linear_reg_bspl(U_ts_all_tmp(:,1),CQ_tmp(:,idx));
+    plot(U_ts_all(MAD_idx,1),CQ(MAD_idx,idx),'o','Color',[.75,.75,.75],'LineWidth',3,'MarkerSize',12);
 end
 
 end
